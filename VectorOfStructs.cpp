@@ -21,18 +21,21 @@ int main(){
     
     //generating random number for # of Color objects
     int rnd = rand() % (MX - MN + 1) + MN;
+    
+    cout << "Color#\tR value\tG value\tB value" << endl;
+    cout << "------\t-------\t-------\t-------" << endl;
 
     for (int i = 0; i < rnd; i++){
         //temp struct to push into vector
-        int red = rand() % 300;
-        int green = rand() % 300;
-        int blue = rand() % 300;
-        Color temp = {red, green, blue};
+        Color temp;
+        temp.red = rand() % 300;
+        temp.green = rand() % 300;
+        temp.blue = rand() % 300;
+
         color.push_back(temp);
+
+        cout << i + 1 << "\t" << temp.red << "\t" << temp.green << "\t" << temp.blue << endl;
     }
-
-    cout << color[20].red << " " << color[20].green << " " << color[20].blue << endl;
-
 
     return 0;
 }
