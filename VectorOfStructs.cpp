@@ -12,12 +12,12 @@ struct Color{
 
 int main(){
 
+    //vector to hold data from temp struct
     vector<Color> color;
     Color temp = {232, 324, 2};
     color.push_back(temp);
 
-    cout << color[0].red << " " << color[0].green << " " << color[0].blue << endl
-;
+    cout << color[0].red << " " << color[0].green << " " << color[0].blue << endl;
 
     return 0;
 }
