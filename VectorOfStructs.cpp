@@ -1,10 +1,11 @@
 #include <iostream>
 #include <vector>
 #include <string>
+#include <iomanip>
 using namespace std;
 
+//constants for random number generation
 const int MX = 50, MN = 25;
-
 
 //defining struct for holding RGB hue values
 struct Color{
@@ -22,8 +23,8 @@ int main(){
     //generating random number for # of Color objects
     int rnd = rand() % (MX - MN + 1) + MN;
     
-    cout << "Color#\tR value\tG value\tB value" << endl;
-    cout << "------\t-------\t-------\t-------" << endl;
+    cout << left << setw(8) << "Color#" << setw(9) << "R value" << setw(9) << "G value" << setw(9) << "B value" << endl;
+    cout << setw(8) << "------" << setw(8) << "-------" << setw(8) << "-------" << setw(8) << "-------" << endl;
 
     for (int i = 0; i < rnd; i++){
         //temp struct to push into vector
@@ -34,7 +35,7 @@ int main(){
 
         color.push_back(temp);
 
-        cout << i + 1 << "\t" << temp.red << "\t" << temp.green << "\t" << temp.blue << endl;
+        cout << left << setw(8) << i + 1 << setw(8) << temp.red << setw(8) << temp.green << setw(8) << temp.blue << endl;
     }
 
     return 0;
