@@ -23,7 +23,7 @@ int main(){
     //generating random number for # of Color objects
     int rnd = rand() % (MX - MN + 1) + MN;
     
-    cout << left << setw(8) << "Color#" << setw(9) << "R value" << setw(9) << "G value" << setw(9) << "B value" << endl;
+    cout << left << setw(8) << "Color#" << setw(8) << "R value" << setw(8) << "G value" << setw(8) << "B value" << endl;
     cout << setw(8) << "------" << setw(8) << "-------" << setw(8) << "-------" << setw(8) << "-------" << endl;
 
     for (int i = 0; i < rnd; i++){
